@@ -4,51 +4,75 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Страница о путешественнике Артеме Тычинине">
-  <title>Артем Тычинин — путешественник</title>
+  <title>Артем Тычинин - путешественник</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    .projects-list { column-count: 2; column-gap: 30px; }
+  </style>
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-content">
-      <div>
-        <p class="eyebrow">Личный сайт</p>
-        <h1>Артем Тычинин</h1>
-        <p class="subtitle">Путешественник, который собирает впечатления</p>
-      </div>
-      <img class="avatar" src="images/avatar.svg" alt="Иллюстрация путешественника с рюкзаком" width="180" height="180">
+    <div class="container">
+      <p class="small-text">Личный сайт</p>
+      <h1>Артем Тычинин</h1>
+      <p>Путешественник, который собирает впечатления</p>
+      <img class="avatar" src="images/avatar.svg" alt="Путешественник с рюкзаком" width="180" height="180">
+    </div>
   </header>
+  <nav class="menu" aria-label="Основное меню">
+    <div class="container menu-links">
+      <a href="#about">Обо мне</a>
+      <a href="#countries">Страны</a>
+      <a href="#contact">Связаться</a>
+      <a href="https://ru.wikipedia.org/wiki/Путешествие" target="_blank">О путешествиях</a>
+    </div>
+  </nav>
   <main class="container layout">
     <div class="content">
-      <section aria-labelledby="about-title">
-        <h2 id="about-title">Обо мне</h2>
-        <p>Я люблю открывать новые места, знакомиться с людьми и замечать детали, которые делают каждую поездку особенной. Для меня путешествие — это возможность узнать больше о мире и о себе.</p>
+      <section id="about" class="card">
+        <h2 class="static-title">Обо мне</h2>
+        <p>Я люблю открывать новые места, знакомиться с людьми и замечать интересные детали. Путешествия помогают мне узнавать больше о мире и о себе.</p>
       </section>
-      <section aria-labelledby="skills-title">
-        <h2 id="skills-title">Навыки, полезные в путешествиях</h2>
+      <section class="card">
+        <h2>Полезные навыки</h2>
         <ul>
-          <li>Планирование маршрутов и самостоятельных поездок</li>
-          <li>Ориентирование на местности и работа с картами</li>
-          <li>Изучение иностранных языков и культур</li>
-          <li>Фотография и ведение дорожных заметок</li>
+          <li>Планирование маршрута</li>
+          <li>Ориентирование по карте</li>
+          <li>Знание иностранных языков</li>
+          <li>Общение с людьми</li>
         </ul>
       </section>
-      <section aria-labelledby="projects-title">
-        <h2 id="projects-title">Посещённые страны</h2>
-        <ol>
-          <li>Россия — путешествия по историческим городам</li>
-          <li>Турция — знакомство с побережьем и местной кухней</li>
-          <li>Грузия — горные маршруты и древние традиции</li>
-          <li>Казахстан — степные пейзажи и космодром Байконур</li>
+      <section id="countries" class="card projects">
+        <h2>Посещённые страны</h2>
+        <ol class="projects-list">
+          <li>Россия - исторические города</li>
+          <li>Турция - море и местная кухня</li>
+          <li>Грузия - горы и древние традиции</li>
+          <li>Казахстан - степи и Байконур</li>
         </ol>
       </section>
+      <section id="contact" class="card">
+        <h2>Напишите мне</h2>
+        <form>
+          <label for="name">Ваше имя</label>
+          <input id="name" type="text" placeholder="Введите имя" required>
+          <label for="message">Сообщение</label>
+          <textarea id="message" rows="4" placeholder="Ваш вопрос" required></textarea>
+          <button type="submit" style="font-size: 16px;">Отправить</button>
+        </form>
+      </section>
     </div>
-    <aside class="sidebar" aria-labelledby="aside-title">
-      <h2 id="aside-title">Любимое место</h2>
+    <aside class="sidebar">
+      <h2>Любимое место</h2>
       <p class="place">Казахстан</p>
-      <p>Мне нравится сочетание степей, гор, арыков, гостеприимства, архитектуры и необычной кухни. Особенно хочу ещё раз побывать в Алма-Ате и посетить "чарынский коньон".</p>
-      <div class="fact"><span class="fact-number">04</span><span>страны в списке путешествий</span></div>
+      <p>Мне нравятся степи, горы, гостеприимство и необычная кухня этой страны.</p>
+      <div class="fact">
+        <span class="fact-number">04</span>
+        <span>страны в списке путешествий</span>
+        <span class="fact-mark">★</span>
+      </div>
     </aside>
   </main>
-  <footer class="site-footer"><p>&copy; 2026 Артем Тычинин.</p></footer>
+  <footer class="site-footer"><p>&copy; 2026 Артем Тычинин</p></footer>
 </body>
 </html>
