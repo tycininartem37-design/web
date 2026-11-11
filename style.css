@@ -109,6 +109,88 @@ body {
   border-radius: 10px;
 }
 
+.skills-section > h2 {
+  margin-bottom: 16px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(25% - 17px);
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+.skill-card h3 {
+  margin: 0 0 12px;
+  color: var(--dark);
+  font-size: 20px;
+}
+
+.skill-card dl {
+  margin: 0;
+}
+
+.skill-card dt {
+  color: var(--orange);
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.skill-card dd {
+  margin: 0 0 8px;
+}
+
+.progress {
+  height: 12px;
+  margin-top: auto;
+  overflow: hidden;
+  background-color: var(--dark);
+  border-radius: 999px;
+}
+
+.progress div {
+  height: 100%;
+  background-color: #f28c28;
+  border-radius: inherit;
+}
+
+.stats-section {
+  margin-top: 22px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.stat-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 110px;
+  padding: 16px;
+  background-color: var(--light-beige);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat-number {
+  color: var(--orange);
+  font-size: 34px;
+  font-weight: bold;
+}
+
 h2 {
   position: relative;
   margin-top: 0;
@@ -218,5 +300,21 @@ button:active {
 
   .projects-list {
     column-count: 1;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 950px) {
+  .skill-card {
+    flex-basis: calc(50% - 11px);
+  }
+}
+
+@media (max-width: 700px) {
+  .skill-card {
+    flex-basis: 100%;
   }
 }
